@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>53-盒子居中和内容居中</title>
+		<style type="text/css">
+			.father {
+				width: 800px;
+				height: 500px;
+				background-color: red;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.sun {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				/* margin: 0 auto; */
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 1、text-align:center和margin:0 auto；区别?
+		 text-align:center; 作用：设置盒子盒子中存储的文字/图片水平居中
+		 
+		 margin: 0 auto; 作用：让盒子自己水平居中
+		 -->
+		 <div class="father">
+			 我是文字<br>
+			 <img src="images/girl.jpg" >
+			 <div class="sun"></div>
+		 </div>
+	</body>
+</html>

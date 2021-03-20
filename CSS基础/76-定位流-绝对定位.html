@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>76-定位流-绝对定位</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 100px;
+				height: 100px;
+			}
+			.box1 {
+				background-color: red;
+			}
+			.box2 {
+				background-color: green;
+				position: absolute;
+				/* left:0; */
+				/* top: 0; */
+				bottom: 0;
+				/* right: 0; */
+				left: 0;
+				/* float: left; */
+			}
+			.box3 {
+				background-color: blue;
+			}
+			
+			span {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 1、什么是绝对定位？
+		 绝对定位就是相对于body来定位
+		 
+		 2、绝对定位注意点？
+		 2.1 绝对定位的元素是脱离标准流的
+		 2.2 绝对定位的元素是不区分块级元素/行内元素/行内块级元素的
+		 
+		 -->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		
+		<!-- <span>我是span</span> -->
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>50-盒子宽度和高度练习1</title>
+		<style type="text/css">
+			/* 判断是否是内容宽高为100的盒子 
+				只需要看width/height是否为100即可
+			*/
+			.box1 {
+				width: 50px;
+				height: 50px;
+				padding: 25px;
+				background-color: green;
+			}
+			.box2 {
+				width: 96px;
+				height: 96px;
+				border: 2px solid #000;
+			}
+			
+			.box3 {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+			
+			/* 判断是否是元素宽高为200的盒子
+			 只需要看 边框 + 内边距 + 内容宽度/高度 是否等于200即可
+			 */
+			.box4 {
+				width: 100px;
+				height: 100px;
+				margin: 50px;
+				background-color: red;
+			}
+			
+			.box5 {
+				width: 150px;
+				height: 150px;
+				border: 25px solid #000;
+			}
+			
+			.box6 {
+				width: 150px;
+				height: 150px;
+				padding: 25px;
+				background-color: blue;
+			}
+			/* 判断是否是元素空间宽高为300的盒子
+			 只需要看 外边距 + 边框 + 内边距 + 内容宽度/高度*/
+			.box7{
+				width: 300px;
+				height: 300px;
+				background-color: purple;
+			}
+			
+			.box8 {
+				/* 50+50+25+25+25+25+100 */
+				width: 100px;
+				height: 100px;
+				padding: 25px;
+				border: 25px solid #000;
+				margin: 50px;
+			}
+			/* 
+			现有如下盒子模型，要求增加padding属性为25之后，仍然保持元素宽高为200 
+			 
+			 元素宽高 = 边框 + 内边距 + 内容宽高
+			 
+			 规律：
+			 1、增加了padding之后元素的宽高也会发生变化
+			 2、如果增加了padding之后还想保持元素的宽高，那么就必须减去内容的宽高
+			 */
+			.box9 {
+				/* width: 200px;
+				height: 200px;
+				background-color: red; */
+				width: 150px;
+				height: 150px;
+				padding: 25px;
+				background-color: red;
+			}
+			/* 
+			现有如下盒子模型，要求增加border属性为20之后仍然保持元素宽高为200
+			 
+			 元素宽高 = 边框 + 内边距 + 内容宽高
+			 
+			 规律：
+			 1、增加了border之后元素的宽高也会发生变化
+			 2、如果增加了border之后，还想保持元素的宽高，那么就必须减去内容的宽高
+			 */
+			.box10 {
+				/* width: 200px;
+				height: 200px;
+				background-color: deepskyblue; */
+				width: 160px;
+				height: 160px;
+				border: 20px solid #000;
+				background-color: deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+		<div class="box6"></div>
+		<div class="box7"></div>
+		<div class="box8"></div>
+		<div class="box9"></div>
+		<div class="box10"></div>
+	</body>
+</html>
+
+

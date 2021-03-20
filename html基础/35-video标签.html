@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35-video标签</title>
+</head>
+<body>
+    <!-- 
+        video标签？作用：播放视频
+
+        video标签的属性
+        src：告诉video标签需要播放的视频地址
+        autoplay:video标签是否需要自动播放
+        controls: 告诉video标签是否显示控制条
+        poster:告诉video标签视频没有播放之前显示的占位图片
+        loop:一般用于做广告视频，告诉video标签视频播放完毕之后是否需要循环播放
+        preload: 预加载视频，需要注意preload和autoplay相冲，如果设置了autoplay属性，那么preload属性就会失效
+        muted:静音
+        width/height: 和img标准中的一模一样
+     -->
+
+    <video src="images/1.mp4" loop="loop" autoplay="autoplay" poster="images/1.jpg" muted="muted" width="800"></video>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37-audio标签</title>
+</head>
+<body>
+
+    <!-- 
+        
+        audio标签？播放音频
+
+        格式：
+        <audio src=""></audio>
+
+
+        <audio>
+            <source></source>
+        </audio>
+
+        注意点：
+        audio标签和video标签的使用基本一样
+        只不过有三个属性不能用:height/width/poster
+     -->
+
+    <!-- 方式一： -->
+    <!-- <audio src="images/gameBGM.mp3" autoplay="autoplay" controls="controls"></audio> -->
+
+    <!-- 方式二： -->
+    <audio autoplay="autoplay" controls="controls">
+        <source src="images/gameBGM.mp3" type="audio/mp3"></source>
+        <source src="images/gameBGM.ogg" type="audio/ogg"></source>
+        <source src="images/gameBGM.webm" type="audio/webm">
+    </audio>
+
+    
+    
+</body>
+</html>

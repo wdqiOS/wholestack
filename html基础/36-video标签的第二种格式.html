@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36-video标签的第二种格式</title>
+</head>
+<body>
+
+    <!-- 
+        video标签的第二种格式存在的意义就是为了解决浏览器适配问题 video元素支持三种视频格式，我们可以把这三种格式都通过source标签指定给video标签，那么以后当浏览器播放视频时它就会从这三种中选择一种自己支持的格式来播放
+        
+        注意点：
+        浏览器必须支持HTML5标签才能使用video标签，所以让过去的一些浏览器也能够通过video标签来播放视频，那么我们可以通过一个JS框架叫做html5media来实现
+        
+    -->
+    <video controls="controls" autoplay="autoplay">
+        <source src="images/1.webm" type="video/webm"></source>
+        <source src="images/1.ogg" type="video/ogg"></source>
+        <source src="images/1.mp4" type="video/mp4"></source>
+
+    </video>
+    
+</body>
+</html>

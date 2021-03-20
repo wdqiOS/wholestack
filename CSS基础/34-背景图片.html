@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34-背景图片</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+        }
+        .box1{
+            /* background-image: url('../1.jpg'); */
+            background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F120%2A80%2F53a7f1e289686.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618240597&t=fb7c526cb7e42c813f577d23ba0a42ea');
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1、如何设置背景图片？
+        在CSS中有一个叫做background-image:url();的属性就是专门用于设置背景图片的
+
+        注意点：
+        1、图片的地址必须放在url()中，图片的地址可以是本地的地址，也可以是网络的地址
+        2、如果图片的大小没有标签的大小大，那么会自动的在水平和垂直方向平铺和填充
+        3、如果网页上出现了图片，那么浏览器会再次发送请求获取图片
+     -->
+    <div class="box1"></div>
+</body>
+</html>

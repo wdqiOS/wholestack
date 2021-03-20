@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27-优先级之important</title>
+
+    <style>
+        #identity {
+            color: pink;
+            font-size: 100px !important;
+        }
+
+        .para {
+            color: blue !important;
+        }
+        * {
+            color: slateblue !important;
+        }
+        p {
+            color: red;
+        }
+        li {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+
+        1、什么是important?
+        作用:用于提升某个直接选中标签的选择器中的某个属性的优先级的，可以将被指定的属性的优先级提升为最高
+
+        注意点：
+        1、important只能用于直接选中，不能用于间接选中
+        2、通配符选择器选中的标签就是直接选中的
+        3、!important只能提升指定的属性的优先级，其他的属性优先级不会被提升
+        4、!important必须写在属性值的分号前面
+        5、!important前面的感叹号不能省略
+
+     -->
+
+     <ul>
+         <li>
+             <p id="identity" class="para">我是段落</p>
+         </li>
+     </ul>
+    
+</body>
+</html>

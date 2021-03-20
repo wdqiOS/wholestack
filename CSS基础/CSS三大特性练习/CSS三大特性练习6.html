@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三大特性练习6</title>
+
+    <style>
+        #father #son {
+            color: blue;
+        }
+
+        #father p.box2{
+            color: black;
+        }
+
+        div.box1 p.box2 {
+            color: green;
+        }
+
+        #father {
+            color: red !important;
+        }
+
+        div#father.box1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="father" class="box1">这不是内容吗？
+        <p id="son" class="box2">这行文字是什么颜色的？</p>
+    </div>
+    
+</body>
+</html>

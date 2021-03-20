@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22-表格标签的属性</title>
+</head>
+<body>
+
+    <!-- 
+        1、 宽度和高度属性
+            width
+            height
+        2、水平和垂直对齐的属性
+            align
+            valign
+        3、外边距、内边距属性
+            cellspacing: 2, 默认外边距是2
+            cellpadding:1, 默认内边距1
+     -->
+     <!-- 2行2列的表格 -->
+    <table border="1" width="500px" height="300px" align="center" cellspacing="0" cellpadding="1">
+        <tr valign="bottom">
+            <td width="200px" height="50px">1.1</td>
+            <td valign="top">1.2</td>
+        </tr>
+        <tr align="center">
+            <td align="center">2.1</td>
+            <td>2.2</td>
+        </tr>
+    </table>
+</body>
+</html>
