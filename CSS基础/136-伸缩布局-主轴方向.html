@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>136-伸缩布局-主轴方向</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+				/* 
+				 在伸缩布局中，默认情况下水平方向是主轴，默认情况下主轴的起点在伸缩容器的最左边，默认情况下所有的伸缩项都是从主轴的起点开始排版的
+				 但是我们也可以通过属性来修改主轴的起点的位置
+				 
+				 flex-direction: 用于修改主轴起点的位置
+				 row：起点在伸缩容器的最左边，终点在伸缩容器的最右边，从左至右的排版，默认的取值
+				 row-reverse: 起点在伸缩容器的最右边，终点在伸缩容器的最左边，从右至左的排版
+				 column：起点在伸缩容器的顶部，终点在伸缩容器的的最底部，从上至下的排版
+				 column-reverse：起点在伸缩容器的底部，终点在伸缩容器的最顶部，从下至上的排版
+				 注意点：在伸缩布局中，主轴和侧轴永远是十字交叉的，只要主轴的方向发生了变化，侧轴的方向也会发生变化
+				 */
+				/* 从左至右排版 */
+				/* flex-direction: row; */
+				/* 从右至左排版 */
+				/* flex-direction: row-reverse; */
+				
+				/* 从上至下排版 */
+				/* flex-direction: column; */
+				/* 从下至上排版 */
+				flex-direction: column-reverse;
+			}
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>

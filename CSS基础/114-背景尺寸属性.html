@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>114-背景尺寸属性</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				width: 800px;
+				height: 500px;
+				border: 1px solid;
+				margin: 0 auto;
+			}
+			
+			ul li {
+				list-style: none;
+				float: left;
+				width: 200px;
+				height: 200px;
+				margin: 30px 30px;
+				border: 1px solid;
+				text-align: center;
+				line-height: 200px;
+			}
+			
+			/* 默认 */
+			ul li:nth-child(1) {
+				background: url(images/dog.jpg) no-repeat;
+			}
+			/* 具体像素 */
+			ul li:nth-child(2) {
+				background: url(images/dog.jpg) no-repeat;
+				/* 
+				 第一个参数：宽度
+				 第二个参数：高度
+				 */
+				background-size: 200px 100px;
+			}
+			/* 百分比 */
+			ul li:nth-child(3) {
+				background: url(images/dog.jpg) no-repeat;
+				/*
+				 第一个参数：宽度为当前元素宽度的50%
+				 第二个参数：高度为当前元素高度的50%
+				 */
+				background-size: 50% 50%;
+			}
+			/* 宽度等比拉伸 */
+			ul li:nth-child(4) {
+				background: url(images/dog.jpg) no-repeat;
+				background-size: auto 100px;
+			}
+			/* 高度等比拉伸 */
+			ul li:nth-child(5) {
+				background: url(images/dog.jpg) no-repeat;
+				background-size: 100px auto;
+			}
+			
+			/* cover */
+			ul li:nth-child(6) {
+				background: url(images/dog.jpg) no-repeat;
+				/* 
+				 cover含义：
+				 1、告诉系统图片需要等比拉伸
+				 2、告诉系统图片需要拉伸到宽度和高度都填满元素
+				 */
+				background-size: cover;
+			}
+			
+			/* contain */
+			ul li:nth-child(7) {
+				background: url(images/dog.jpg) no-repeat;
+				/* 
+				 cover含义：
+				 1、告诉系统图片需要等比拉伸
+				 2、告诉系统图片需要拉伸到宽度或高度填满元素
+				 */
+				background-size: contain;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!-- 
+		 1、什么是背景尺寸属性？
+		 背景尺寸属性是CSS3中新增的一个属性，专门用于设置背景图片大小
+		 -->
+		 <ul>
+		 	<li>默认</li>
+		 	<li>具体像素</li>
+		 	<li>百分比</li>
+		 	<li>宽度等比拉伸</li>
+		 	<li>高度等比拉伸</li>
+		 	<li>cover</li>
+			<li>contain</li>
+		 </ul>
+		 
+	</body>
+</html>

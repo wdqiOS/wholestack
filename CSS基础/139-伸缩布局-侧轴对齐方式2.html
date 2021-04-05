@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>139-伸缩布局-侧轴对齐方式2</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				height: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+				
+			}
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+			}
+			ul>li:nth-child(1) {
+				/*
+				如果在伸缩容器中通过align-items:来控制伸缩项的对齐方式，是一次性控制所有伸缩项的对齐方式；如果要单独的控制某一个伸缩项在侧轴上的对齐方式，那么需要将控制的对齐方式的属性写到伸缩项中
+				align-items: 写到伸缩容器中，控制所有的伸缩项
+				align-self: 写到伸缩项中，控制编写对应代码的那个伸缩项
+				align-self和align-items的取值是相同的，只是控制的范围和书写的位置不同而已
+				 */
+				background-color: red;
+				align-self: flex-end;
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+				align-self: center;
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+				align-self: flex-start;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>xy</li>
+			<li>xt</li>
+			<li>zt</li>
+			<li>4</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>107-3D转换模</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.father {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				border: 1px solid;
+				margin: 100px auto;
+				/* 远小近大效果 */
+				perspective: 500px;
+				/* 
+				 1、什么是2D和3D？
+				 2D就是一个平面，只有宽度和高度，没有厚度
+				 3D就是一个立体，有宽度和高度，还有厚度
+				 默认情况下所有的元素都是呈2D展现的
+				 
+				 2、如果让某个元素呈3D展现？
+				 和透视一样，想看到某个元素的3D效果，只需要给他的父元素添加一个transform-style属性，然后设置为preserve-3d即可。
+				 */
+				transform-style: preserve-3d;
+				transform: rotateY(100deg);
+				
+			}
+			.son {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				border: 1px solid;
+				margin: 0 auto;
+				margin-top: 50px;
+				transform: rotateY(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</body>
+</html>

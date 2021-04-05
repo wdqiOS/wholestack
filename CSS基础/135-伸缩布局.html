@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>135-伸缩布局</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				/* overflow: hidden; */
+				/* 伸缩容器 */
+				display: flex;
+				justify-content: space-between;
+			}
+			/* 伸缩对象 */
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+				/* float: left; */
+				/* display: inline-block; */
+				/* 使用浮动，要使父元素的高度由子元素撑起，需要父元素设置overflow:hiddern;来清除浮动 */
+				/* float: left; */ 
+			}
+			
+			ul>li:nth-child(2) {
+				background-color: green;
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>

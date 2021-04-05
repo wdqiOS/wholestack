@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>111-3D转换模块-练习</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				/* 
+				近大远小效果
+				*/
+				perspective: 500px;
+			}
+			ul {
+				width: 200px;
+				height: 200px;
+				/* border: 1px solid; */
+				box-sizing: border-box;
+				margin: 100px auto;
+				position: relative;
+				
+				transform: rotateY(0deg) rotateX(0deg);
+				transform-style: preserve-3d;
+				/* 执行的操作 动画时长 动画速度 延迟多长时间执行 循环次数  是否往返 */
+				animation: move 3s linear 0s infinite normal;
+			}
+			
+			@keyframes move{
+				from{
+					transform: rotateY(0deg) rotateX(0deg);
+				}
+				to{
+					transform: rotateY(0deg) rotateX(360deg);
+				}
+			}
+			
+			ul:hover {
+				animation-play-state: paused;
+			}
+			
+			ul li {
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				font-size: 60px;
+				text-align: center;
+				line-height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			ul li:nth-child(1) {
+				/* 上部 */
+				background-color: red;
+				transform: rotateX(90deg) translateZ(100px) scale(2, 1);
+				
+			}
+			ul li:nth-child(2) {
+				/* 右侧 */
+				background-color: green;
+				transform: rotateX(180deg) translateZ(100px) scale(2, 1);
+			}
+			ul li:nth-child(3) {
+				/* 底部 */
+				background-color: blue;
+				transform: rotateX(270deg) translateZ(100px) scale(2, 1);
+			}
+			ul li:nth-child(4) {
+				/* 上部 */
+				background-color: yellow;
+				transform: rotateX(360deg) translateZ(100px) scale(2, 1);
+			}
+			ul li:nth-child(5) {
+				background-color: purple;
+				transform: translateX(-200px) rotateY(90deg);
+			}
+			ul li:nth-child(6) {
+				background-color: pink;
+				transform: translateX(200px) rotateY(90deg);
+			}
+			
+			ul li img {
+				/* 
+				 注意点：
+				 只要父元素被拉伸了，子元素也会被拉伸
+				 */
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><img src="images/banner1.jpg"/></li>
+			<li><img src="images/banner2.jpg"/></li>
+			<li><img src="images/banner3.jpg"/></li>
+			<li><img src="images/banner4.jpg"/></li>
+			<li></li>
+			<li></li>
+		</ul>	
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>96-2D模块旋转-练习</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 310px;
+				height: 438px;
+				border: 1px solid;
+				margin: 100px auto;
+				/* 近大远小效果 */
+				perspective: 800px;
+			}
+			
+			div img {
+				/* 修改参照点 */
+				transform-origin: center bottom;
+				transition: transform 1s;
+			}
+			div:hover img {
+				/* 围绕X轴旋转 */
+				transform: rotateX(80deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="images/pk.png" >
+		</div>
+	</body>
+</html>

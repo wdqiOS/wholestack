@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>145-伸缩布局-伸缩项扩充和缩小注意点</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				height: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+				flex-direction: column;
+			}
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+			}
+			ul>li:nth-child(1) {
+				/*
+				1、如果没有指定flex-grow属性，或者flex-grow的值是0，那么当前的伸缩项不会扩充
+				2、如果flex-shrink的值是0，那么当前的伸缩项不会被缩小
+				3、注意点：
+				前面缩写的注释是说宽度扩充或者宽度缩小，但是这种说法是不严谨的
+				也有可能扩充和缩小的是高度，倒是宽度还是高度是由主轴决定的
+				扩充和缩小的是主轴方向的值
+				也就是说如果主轴是水平方向的，那么扩充和缩小的值是宽度
+				也就是说如果主轴是垂直方向的，那么扩充和缩小的值是高度
+				  */
+				flex-grow: 0;
+				/* flex-shrink: 0; */
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+				flex-grow: 4;
+				/* flex-shrink: 4; */
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+				flex-grow: 8;
+				/* flex-shrink: 8; */
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>

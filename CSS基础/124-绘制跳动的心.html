@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>124-绘制跳动的心</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.all {
+				width: 450px;
+				height: 450px;
+				/* border: 1px solid; */
+				box-sizing: border-box;
+				margin: 100px auto;
+				position: relative;
+				
+				animation: sport 0.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes sport{
+				from{
+					transform: scale(1);
+				}
+				to{
+					transform: scale(1.2);
+				}
+			}
+			
+			.left {
+				width: 250px;
+				height: 250px;
+				background-color: red;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border: 2px solid darkred;
+				box-shadow: 0px 0px 30px 0px darkred;
+				box-sizing: border-box;
+			}
+			.right {
+				width: 250px;
+				height: 250px;
+				background-color: red;
+				border-radius: 50%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				border: 2px solid darkred;
+				box-shadow: 0px -0px 50px 0px darkred;
+				box-sizing: border-box;
+				
+			}
+			
+			.bottom {
+				width: 250px;
+				height: 250px;
+				background-color: red;
+				position: absolute;
+				bottom: 100px;
+				left: 50%;
+				/* margin-left: -125px; */
+				/* 技巧：在企业开发中推荐使用如下的方式让元素居中 
+				水平居中：left: 50%; transform: translateX(-50%);
+				垂直居中：top:50%;transform: translateY(-50%);
+				  */
+				 border-right:2px solid darkred;
+				 border-bottom: 2px solid darkred;
+				transform: translateX(-50%) rotateZ(45deg);
+				box-shadow: 0px 0px 50px 0px red;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="all">
+			<!-- 左边的小圆 -->
+			<div class="left"></div>
+			<!-- 右边的小圆 -->
+			<div class="right"></div>
+			<!-- 底部的尖尖 -->
+			<div class="bottom"></div>
+		</div>
+	</body>
+</html>

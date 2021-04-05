@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>137-伸缩布局-主轴对齐方式</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+				/*
+				 flex-direction: row; 主轴起点的默认值
+				 justify-content: start; 主轴上伸缩项对齐的默认值
+				 */
+				
+				/* 伸缩布局对齐的方式：第一步：先确定起点位置进行排版；第二部：排版好的伸缩项和主轴的起点对齐方式 */
+				flex-direction: row;
+				/* justify-content: start; */
+				/* justify-content: flex-end; */
+				/* justify-content: center; */
+				/* justify-content: space-between; */
+				justify-content: space-around;
+			}
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</body>
+</html>

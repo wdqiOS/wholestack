@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>146-伸缩布局-伸缩项宽度的设置</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				height: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+			}
+			ul>li {
+				/* width: 100px; */
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+			}
+			ul>li:nth-child(1) {
+				/* 
+				 1、在伸缩布局中可以通过flex-basis属性设置伸缩项的宽度
+				 注意点：flex-basis 只有在伸缩布局中才有效
+				 2、在伸缩布局中如果通过flex-basis设置了宽度，那么再通过width设置宽度就会无效，也就是说flex-basis的优先级要高于width的优先级
+				 3、在伸缩布局中如果同时通过flex-basis和width设置了宽度，而且一个设置的是auto，一个设置的具体的值，那么会按照具体的值来展示
+				 */
+				/* flex-basis: 100px; */
+				/* width: 200px; */
+				/* width: auto; */
+				
+				
+				/* flex-basis: auto;
+				width: 200px; */
+				
+				/* width: 200px;
+				flex-basis: auto; */
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+		
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>

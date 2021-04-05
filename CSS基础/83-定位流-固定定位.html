@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>83-定位流-固定定位</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+		/* 	div {
+				width: 200px;
+				height: 2000px;
+				border: 1px solid;
+				background: url(images/girl.jpg);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			} */
+			div {
+				width: 100px;
+				height: 100px;
+			}
+			.box1 {
+				background-color: red;
+			}
+			.box2 {
+				background-color: green;
+				position: fixed;
+				
+			}
+			.box3 {
+				background-color: blue;
+			}
+			
+			.box4 {
+				width: 100px;
+				height: 2000px;
+				background-color: yellow;
+			}
+			
+	/* 		span {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				position: fixed;
+			} */
+		</style>
+	</head>
+	<body>
+		
+		<!-- 
+		 注意点：
+		 1、固定定位的元素是脱离标准流的，不会占用标准流中的空间
+		2、固定定位和绝对定位一样不区分行内/块级/行内块级
+		 
+		 -->
+		<!-- <div></div> -->
+		
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<!-- <span>我是span</span> -->
+	</body>
+</html>

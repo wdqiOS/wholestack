@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>142-伸缩布局-伸缩项排序问题</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+				width: 600px;
+				height: 600px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+			}
+			ul>li {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				background-color: red;
+			}
+			ul>li:nth-child(1) {
+				/* 
+				 默认情况下，每一个伸缩项都有一个order属性，用于决定排序的先后顺序，默认情况下所有伸缩项的order属性的取值都是0
+				 我们可以通过修改order属性的取值来实现伸缩项的排序
+				 排序的规则：从小到大的排序，越小的显示在越前面，越大的显示在越后面
+				 */
+				order: 999;
+			}
+			ul>li:nth-child(2) {
+				background-color: green;
+				order: 0;
+			}
+			ul>li:nth-child(3) {
+				background-color: blue;
+				order: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>xy</li>
+			<li>xt</li>
+			<li>zt</li>
+		</ul>
+	</body>
+</html>
+
+

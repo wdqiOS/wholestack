@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>119-CSS书写格式</title>
+		<style type="text/css">
+			/* div{
+				color: blue;
+			} */
+			@import url("117-CSS书写格式.css");
+		</style>
+		<!-- <link rel="stylesheet" type="text/css" href="117-CSS书写格式.css"/> -->
+	</head>
+	<body>
+		<!-- 
+		 CSS书写格式：
+		 1、行内样式
+		 可以直接将CSS代码写到开始标签当中
+		 
+		 2、内嵌样式
+		 可以在一堆head标签当中写上一对style标签，然后在style标签中编写CSS代码
+		 
+		 3、外链样式 --- 企业开发中一般都使用外链样式
+		可以单独新建一个.css文件，把CSS代码写到这个文件中，然后通过link标签把这个文件和.html文件关联
+		
+		4、导入样式
+		可以单独新建一个.css文件，把CSS代码写到这个文件中，然后通过在style中使用@important把这个文件和.html文件关联
+		
+		外链样式和导入样式的区别？
+		1、外链样式是通过link标签关联，而导入样式时通过@important关联，而@important是CSS2.1推出的，所以有兼容问题
+		2、外链样式是在显示界面的时候，会先加载CSS样式，再加载结构，所以用户看到界面时一定已经设置了样式
+		导入样式在显示界面的时候，会先加载结构，再加载样式，所以用户看到界面的时候不一定已经设置了样式
+		
+		 -->
+		<!-- <div style="color: red;">我是div</div> -->
+		<div>我是div</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>105-动画模块-无限滚动上</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 600px;
+				height: 188px;
+				border: 1px solid;
+				margin: 100px auto;
+				overflow: hidden;
+			}
+			
+		
+			
+			ul {
+				width: 2000px;
+				height: 188px;
+				background-color: yellow;
+				animation: move 5s linear 0s infinite normal;
+			} 
+			
+			ul:hover {
+				animation-play-state: paused;
+				cursor: pointer;
+			}
+			
+			@keyframes move{
+				from{
+					margin-left: 0;
+				}
+				to{
+					margin-left: -1200px;
+				}
+			}
+			
+			ul li {
+				list-style: none;
+				width: 300px;
+				height: 188px;
+				background-color: red;
+				border: 1px solid;
+				float: left;
+				box-sizing: border-box;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><img src="images/banner1.jpg"/></li>
+				<li><img src="images/banner2.jpg"/></li>
+				<li><img src="images/banner3.jpg"/></li>
+				<li><img src="images/banner4.jpg"/></li>
+				<li><img src="images/banner1.jpg"/></li>
+				<li><img src="images/banner2.jpg"/></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>132-线性渐变练习</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #000000;
+			}
+			div {
+				width: 600px;
+				height: 200px;
+				list-style: 200px;
+				font-size: 150px;
+				font-weight: bold;
+				border: 1px solid red;
+				margin: 200px auto;
+				/* color: red; */
+				background-image: linear-gradient(-45deg, transparent 100px, white 150px, white 180px, transparent 220px);
+				background-position: -450px 0;
+				background-repeat: no-repeat;
+				/* background-color: skyblue; */
+				color: rgba(255, 255, 255, 0.3);
+				
+				/* -webkit-background-clip可以将背景裁剪为文字的形状
+				  注意点：
+				  -webkit-background-clip 是一个私有属性，并不是所有的浏览器都支持
+				  */
+				-webkit-background-clip: text;
+				
+				transition: all 5s;
+			}
+			div:hover {
+				background-position: 450px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div>兴趣学习</div>
+	</body>
+</html>

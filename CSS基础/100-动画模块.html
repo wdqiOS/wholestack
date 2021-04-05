@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>100-动画模块</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 100px;
+				height: 50px;
+				background-color: red;
+				/* transition: margin-left;
+				transition-duration: 3s; */
+				/* 1. 告诉系统需要执行哪个动画 */
+				animation-name: lz;
+				 /* 3. 告诉系统动画持续的时间 */
+				animation-duration: 3s;
+			}
+			/* 2. 告诉系统我们需要自己创建一个名称叫做lz的动画 */
+			@keyframes lz{
+				from{
+					margin-left: 0;
+				}
+				to{
+					margin-left: 500px;
+				}
+			}
+			/* div:hover {
+				margin-left: 500px;
+			} */
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 1、过渡和动画之间的异同
+		 1.1 不同点
+		 过渡必须人为触发才会执行动画
+		 动画不需要人为的触发就会执行动画
+		 
+		 1.2 相同点
+		 过渡和动画都是用来给元素添加动画的
+		 过渡和动画都是系统新增的一些属性
+		 过渡和动画都需要满足三要素，才会有动画效果
+		 
+		 1.3 动画三要素
+		 a. 告诉系统需要执行哪个动画
+		 b. 告诉系统我们需要自己创建一个名称叫做lz的动画
+		 c. 告诉系统动画持续的时间
+		 -->
+		<div></div>
+		
+	</body>
+</html>
