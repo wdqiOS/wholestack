@@ -8,17 +8,73 @@
 				margin: 0;
 				padding: 0;
 			}
+			.left,.right {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				float: left;
+			}
+			.center {
+				width: 100%;
+				height: 200px;
+				background-color: skyblue;
+				float: left;
+			}
+			.center>.center-in {
+				margin: 0 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+			.left {
+				margin-left: -100%;
+			}
+			.right {
+				margin-left: -200px;
+			}
+			.box {
+				background-color: purple;
+				overflow: hidden;
+				min-width: 500px;
+			}
+		
 		</style>
 	</head>
 	<body>
 		<!-- 
 		 1、双飞翼布局实现步骤
 		 1.1 搞一个容器，里面放三个盒子
+		 1.2 设置两侧盒子的宽度（固定）
+		 1.3 设置中间盒子的宽度等于容器的宽度(100%)
+		 1.4 让三个盒子在同一个方向上浮动
+		 1.5 给中间的盒子添加一个子盒子
+		 1.6 给子盒子设置margin:0 两侧盒子的宽度
+		 1.7 设置左侧盒子的margin-left: -100%;
+		 1.8 设置右侧盒子的margin-left: -自身的宽度
 		 -->
 		<div class="box">
-			<div class="center"></div>
+			<div class="center">
+				<div class="center-in">中间的内容中间的内容中间的内容中间的内容中间的内容中间的内容中间的内容</div>
+			</div>
 			<div class="left"></div>
 			<div class="right"></div>
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

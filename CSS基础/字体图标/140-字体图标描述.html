@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>140-字体图标描述</title>
+		<!-- 使用字体图标方式一：Unicode方式 -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"/> -->
+		<!-- 使用字体图标方式二：Font Class -->
+		<!-- <link rel="stylesheet" type="text/css" href="font/iconfont.css"/> -->
+		<!-- 使用字体图标方式三：Symbol -->
+		<script src="font/iconfont.js"></script>
+		<style>
+		.icon {
+		  width: 1em;
+		  height: 1em;
+		  vertical-align: -0.15em;
+		  fill: currentColor;
+		  overflow: hidden;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 
+		 2、字体图标
+		 本质是文字（体积小），虽然字体图标的本质是文字，但是也可以做出和图片一样的效果并且可以随意修改颜色、大小、透明度等（扩展性强）
+		 3、常用字体图标库
+		 https://www.iconfont.cn/
+		 https://icomoon.io/
+		 
+		 4、字体图片的使用
+		 4.1 设计师提供SVG格式图标
+		 4.2 上传到对应字体图标网站
+		 4.3 下载生成的代码使用
+		 
+		 
+		 - 找到下载好的对应的文件，将所有的iconfont开头的文件放到项目的font文件夹下面
+		 - 新建一个CSS文件，将demo index.html对应的代码拷贝进去
+		 
+		 - 注意点：
+		 拷贝代码之后需要将@font-face中的资源路径改为拷贝资源对应的路径
+		 -->
+		 <!-- 使用字体图标方式一：Unicode方式 -->
+		 <!-- <div class="iconfont">&#xf0178;</div>
+		 <p class="iconfont">&#xe669;</p>
+		 <span class="iconfont">&#xe617;</span> -->
+		 
+		 <!-- 使用字体图标方式二：Font Class -->
+		<!-- <span class="iconfont icon-gouwucheman"></span>
+		 <div class="iconfont icon-fangdajing"></div>
+		 <p class="iconfont icon-dingdan"></p> -->
+		 
+		 <!-- 使用字体图标方式三：Symbol -->
+		 <svg class="icon" aria-hidden="true">
+		   <use xlink:href="#icon-80gerenzhongxin"></use>
+		 </svg>
+	</body>
+</html>
