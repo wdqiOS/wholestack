@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>42-JavaScript-switch注意点</title>
+		<script type="text/javascript">
+				// 1、case判断的是===，而不是==
+				/*
+				let num = 123;
+				switch(num) {
+					case "123":
+						console.log('字符串123');
+						break;
+					case 123:
+						console.log('数值的123');
+						break;
+					default:
+						console.log('其他');
+						break;
+				}
+				*/
+			   
+				// 2、（）中可以是常量也可以是变量还可以是表达式
+				/*
+				let num = 123;
+				switch(num) { // 变量
+					case 123:
+						console.log('数值的123');
+						break;
+					default:
+						console.log("other");
+						break;
+				}
+				*/
+			   
+			   /*
+			   switch(123) { // 常量
+			   	case 123:
+			   		console.log('数值的123');
+			   		break;
+			   	default:
+			   		console.log("other");
+			   		break;
+			   }
+			   */
+			   
+			   /*
+			   switch(122 + 1) { // 表达式
+			   	case 123:
+			   		console.log('数值的123');
+			   		break;
+			   	default:
+			   		console.log("other");
+			   		break;
+			   }
+			   */
+			  
+				// 3、case后面可以常量也可以是变量还可以是表达式
+				/*
+				switch(123) {
+					case 123: // 常量
+						console.log('数值的123');
+						break;
+					default:
+						console.log('other');
+						break;
+				}
+				*/
+				
+				/*
+				let num = 123;
+				switch(123) {
+					case num: // 变量
+						console.log('数值的123');
+						break;
+					default:
+						console.log('other');
+						break;
+				}
+			   */
+			  /*
+			  switch (123) {
+					case 122 + 1: // 表达式
+						console.log('数值的123');
+						break;
+					default:
+						console.log('other');
+						break;
+			  }
+			   */
+				// 4、break的作用是立即结束整个switch语句，在switch语句中一旦case或者default被匹配，那么其他的case和default都会失效
+				/*
+				let num = 1;
+				switch(num) {
+					case 1:
+						console.log('1');
+						// break;
+					case 2:
+						console.log(2);
+						break;
+					default:
+						console.log(other);
+						break;
+				}
+				*/
+			   
+			   
+				// 5、default不一定要写在最后
+				// switch中的default无论放到什么位置，都会等到所有case都不匹配再执行
+				/*
+				let num = 7;
+				switch(num) {
+					default:
+						console.log('other');
+						break;
+					case 1:
+						console.log(1);
+						break;
+					case 2:
+						console.log(2);
+						break;
+					// default:
+					// 	console.log('other');
+					// 	break;	
+				}
+				*/
+			   
+				// 6、和if/else中的else一样，default也可以省略
+				
+				let num = 1;
+				switch(num) {
+					case 1:
+						console.log(1);
+						break;
+					case 2:
+						console.log(2);
+						break;
+				}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

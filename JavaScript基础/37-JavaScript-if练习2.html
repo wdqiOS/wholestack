@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>37-JavaScript-if练习2</title>
+		<script type="text/javascript">
+			/*需求：接收用户输入的整数，判断是星期几之后输出*/
+			// 注意点：promt返回值的是一个字符串类型
+			let str = prompt("请输入一个1~7的整数");
+			let day = +str;
+			if(1 === day) {
+				alert('星期一');
+			} else if(2 === day) {
+				alert('星期二');
+			} else if(3 === day) {
+				alert('星期三');
+			} else if(4 === day) {
+				alert('星期四');
+			} else if(5 === day) {
+				alert('星期五');
+			} else if(6 === day) {
+				alert('星期六');
+			} else if(7 === day) {
+				alert('星期日');
+			} else {
+				alert('回到火星去');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

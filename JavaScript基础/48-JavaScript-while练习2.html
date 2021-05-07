@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>48-JavaScript-while练习2</title>
+		<script type="text/javascript">
+			/* 提示用户输入一个正整数n，计算 1+2+3+...n的和 
+			规律：
+			1、每次都是使用上一次的和加上当前的一个数
+			2、每次加上的这个数都是一个递增的数
+			*/
+			let str = prompt('请输入一个正整数');
+			let num = +str;
+			// 2、定义一个变量保存每次递增的那个数
+			let temp = 0;
+			// 1、定义一个标量保存上一次相加的和
+			let sum = 0;
+			while(temp <= num) {
+				console.log(temp);
+				// 3、利用上一次的和加上递增的数
+				sum += temp;
+				temp++;
+			}
+			console.log('和为：' + sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

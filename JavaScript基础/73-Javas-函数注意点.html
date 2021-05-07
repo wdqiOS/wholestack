@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>73-Javas-函数注意点</title>
+		<script type="text/javascript">
+			// 1. 一个函数可以有形参也可以没有形参（零个或多个）
+			// 什么是形参？定义函数时函数()中的变量称之为形参
+			/*
+			// 没有形参的函数
+			function say() {
+				console.log('hello world!');
+			}
+			say();
+			*/
+		   /*
+		   // 有形参的函数
+		   function say(name) {
+			   console.log('hello ' + name);
+		   }
+		   say('lz');
+		   */
+		  
+		  // 2. 一个函数可以有返回值也可以没有返回值
+		  /*
+		  // 没有返回值的函数
+			function say() {
+				console.log('hello world');
+			}
+			say();
+			*/
+		   /*
+		   // 有返回值的函数
+		   function getSum(a, b) {
+			   return a + b;
+		   }
+		   let res = getSum(10, 20);
+		   console.log(res);
+		   */
+		
+			// 3、函数没有通过return明确返回值，默认返回undefined
+			/*
+			function say() {
+				console.log('hello world');
+				// return; // undefined
+			}
+			let res = say();
+			console.log(res);
+			*/
+		   
+		   // 4. return的作用和break相似，所以return后面不能别写任何语句（永远执行不到）
+		   // break作用立即结束switch语句或者循环语句
+		   /*
+		   // return作用立即当前所在函数
+		   function say() {
+			   console.log('hello world');
+			   return;
+			   console.log('return 后面的语句');
+		   }
+		   say();
+		   */
+		   
+		   // 5. 调用函数时实参的个数和形参的个数可以不相同
+		   // 什么是实参？调用函数时传入的数据称之为实参
+		  
+		   function getSum(a, b) {
+			   console.log(a, b);
+			   return a + b;
+		   }
+		    /*
+		   // let res = getSum(10, 20); // 10/20就是实参
+		   let num1 = 10;
+		   let num2 = 20;
+		   let res = getSum(num1, num2); // num1、num2也是实参
+		   console.log(res);
+		   */
+		   /*
+		  // let res = getSum(10);
+		  let res = getSum(10, 20, 30);
+		  console.log(res);
+		  */
+		   // 6. JavaScript中的函数和数组一样，都是引用数据类型
+		   // 既然是一种数据类型，所以可以保存到一个变量中
+		   /*
+		   // 将一个函数保存到一个变量中
+		   // 将来可以通过变量名称找到函数并执行函数
+		   let say = function () {
+			   console.log('hello world');
+		   }
+		   say();
+		   let arr = [];
+		   for(let i = 0; i < 100; i++) {
+			   arr.push(say)
+		   }
+		   console.log(arr);
+		   console.log('-------------------------');
+		   for(let i = 0; i < arr.length; i++) {
+				let fun = arr[i];
+				fun();
+		   }
+		   */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

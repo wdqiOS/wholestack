@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>43-JavaScript-switch练习1</title>
+		<script type="text/javascript">
+			/*
+				要求用户输入一个分数，根据输入的分数输出对应的等级
+				A 90~100
+				B 80~89
+				C 70~79
+				D 60~69
+				E 0~59
+			*/
+		   
+		   // 1、接收用户输入的分数
+		   let str = prompt('请输入一个0~100的分数');
+		   let num = +str;
+		   let score = parseInt(num / 10)
+		   // 2、判断用户输入分数的范围
+		   switch(score) {
+			   case 10:
+					// console.log('A');
+					// break;
+				case 9:
+					console.log('A');
+					break;
+				case 8:
+					console.log('B');
+					break;
+				case 7:
+					console.log('C');
+					break;
+				case 6:
+					console.log('D');
+					break;
+				case 5:
+				case 4:
+				case 3:
+				case 2:
+				case 1:
+				case 0:
+					console.log('E');
+					break;
+				default:
+					console.log('回到火星去');
+					break;
+		   }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

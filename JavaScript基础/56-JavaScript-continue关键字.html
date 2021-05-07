@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>56-JavaScript-continue关键字</title>
+		<script type="text/javascript">
+			/*
+				1、什么是continue关键字？
+				continue关键字只能用于循环结构
+				在循环结构中continue关键字的作用是跳过本次循环，进入下一次循环
+				
+				2、continue关键字的注意点
+				2.1 continue关键字后面和break一样，不能编写其它的代码，因为执行不到
+				2.2 和break一样，如果continue出现嵌套循环结构中，只会跳过当前所在的循环
+			*/
+		   
+		   /*
+		   for(let num = 1; num <= 10; num++) {
+			   if(1 === num) {
+				   continue;
+			   }
+			   console.log('发射子弹：' + num);
+		   }
+		   */
+		  for(let i = 0 ; i <= 5; i++) {
+			  console.log('外面的循环结构：' + i);
+			  for(let j = 0; j <= 5; j++) {
+				  if(1 === j) {
+					  continue;
+				  }
+				  console.log('里面的循环结构：' + j);
+			  }
+		  }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

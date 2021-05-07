@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>64-JavaScript-数组增删改查</title>
+		<script type="text/javascript">
+			let arr = ['a', 'b', 'c'];
+			// 需求：获取数组中索引为1的那个数据（查）
+			
+			// console.log(arr[1]);
+			
+			// 需求：将索引为1的数据修改为m（改）
+			// arr[1] = "m";
+			// console.log(arr);
+			
+			// 需求：将索引为1的数据修改为d，索引为2的修改为e（改）
+			// arr[1] = "d";
+			// arr[2] = "e";
+			// console.log(arr);
+			
+			// 参数一：从什么位置开始
+			// 参数二：需要替换多少个元素
+			// 参数三开始：新的内容
+			// arr.splice(1, 2, 'd', 'e');
+			// console.log(arr);
+			
+			// 需求：要求在数组最后添加一条数据（增）
+			// push方法可以在数组的最后新增一条数据，并且会将新增内容之后的数组当前的长度返回
+			// let res = arr.push('d');
+			// console.log(arr);
+			// console.log(res);
+			
+			// 需求：要求在数组最后添加两条数据（增）
+			
+			// arr.push("d");
+			// arr.push("e");
+			// console.log(arr);
+			
+			// 数组的push方法可以接收一个或多个参数
+			// arr.push("d", "e");
+			// console.log(arr);
+			
+			// 需求：要求在数组最前面添加一条数据（增）
+			// unshift方法和push方法一样，会将新增内容之后当前数组的长度返回
+			// let res = arr.unshift('m');
+			// console.log(arr);
+			// console.log(res);
+			
+			// 需求：要求在数组最前面添加两条数据（增）
+			// unshift方法和push方法一样，可以接收一个或多个参数
+			// let res = arr.unshift('w', 'm');
+			// console.log(arr);
+			// console.log(res);
+			
+			// 需求：要求删除最后一条数据（删）
+			
+			// 数组的pop方法可以删除数组中的最后一条数据，并且将删除的数据返回
+			// let res = arr.pop();
+			// console.log(arr);
+			// console.log(res);
+			
+			// 需求：要求删除最前面一条数据（删）
+			// 数组的shift方法可以删除数组最前面的数据，并且将删除的数据返回
+			
+			// let res = arr.shift();
+			// console.log(arr);
+			// console.log(res);
+			
+			// 需求：要求删除数组中索引为1的数据（删除）
+			// 以下代码的含义：从索引为1的元素开始删除1条数据
+			// 参数1：从什么位置开始
+			// 参数2：需要删除多少个元素
+			// arr.splice(1, 1);
+			// console.log(arr);
+			
+			// 需求：要求删除数组中除了第0条以外的所有数据（删）
+			arr.splice(1, 2);
+			console.log(arr);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

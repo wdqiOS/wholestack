@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>47-JavaScript-while练习1</title>
+		<script type="text/javascript">
+			/* 打印1-100之间7的倍数，并统计个数 */
+			let num = 1;
+			let count = 0;
+			// 1、先写循环结构
+			// 3、指定循环结束条件
+			while(num <= 100) {
+				// 2、书写需要重复执行的代码
+				if(num % 7 === 0) {
+					console.log(num + '-是7的倍数');
+					count++;
+				}
+				num++;
+			}
+			
+			console.log('1-100之间7的倍数个数为：' + count);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
